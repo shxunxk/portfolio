@@ -141,6 +141,14 @@ ul,ol{ margin:0; padding:0; list-style:none; }
   margin-bottom: 34px; opacity:0; animation: rise .7s ease forwards .45s;
 }
 .hero-actions{ display:flex; gap: 14px; opacity:0; animation: rise .7s ease forwards .55s; }
+.hero-signals{
+  display:flex; flex-wrap:wrap; gap: 22px; margin-top: 42px; padding-top: 20px;
+  border-top: 1px solid var(--line); max-width: 520px;
+  opacity:0; animation: rise .7s ease forwards .7s;
+}
+.hero-signals div{ display:flex; flex-direction:column; gap:2px; min-width: 92px; }
+.hero-signals strong{ font-family:var(--font-display); font-size:1.45rem; color:var(--amber); line-height:1; }
+.hero-signals span{ font-family:var(--font-mono); font-size:11px; color:var(--text-faint); text-transform:uppercase; letter-spacing:.04em; }
 
 .btn{
   font-family: var(--font-mono); font-size: 14px; padding: 13px 24px;
@@ -273,6 +281,7 @@ ul,ol{ margin:0; padding:0; list-style:none; }
 .project-link{ color: var(--amber); transition: color .2s ease; }
 .project-link:hover{ color: var(--text); }
 .project-card h3{ font-size: 1.25rem; font-weight: 600; margin-bottom: 12px; }
+.status{ font-family:var(--font-mono); font-size:10px; font-weight:400; color:var(--amber); border:1px solid rgba(232,163,61,.35); padding:4px 7px; border-radius:100px; vertical-align:middle; white-space:nowrap; }
 .project-desc{ color: var(--text-dim); font-size: 0.97rem; margin-bottom: 14px; max-width: 62ch; }
 .edit-note{ color: var(--text-faint); font-style: italic; }
 
@@ -284,7 +293,16 @@ ul,ol{ margin:0; padding:0; list-style:none; }
   font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.06em;
   color: var(--text-dim); font-weight: 500; margin-bottom: 14px; font-family: var(--font-mono);
 }
+.credential-group{ grid-column:1 / -1; }
+.credential{
+  display:flex; align-items:center; justify-content:space-between; gap:20px; max-width:680px;
+  border:1px solid rgba(63,191,176,.25); border-left:3px solid var(--teal);
+  padding:18px 20px; background:rgba(63,191,176,.045);
+}
+.credential-name{ font-family:var(--font-display); font-size:1.05rem; }
+.credential-meta{ color:var(--text-dim); font-family:var(--font-mono); font-size:12px; margin-top:4px; }
 @media (max-width: 700px){ .skills-grid{ grid-template-columns: 1fr; } }
+@media (max-width: 600px){ .credential{ align-items:flex-start; flex-direction:column; gap:12px; } }
 
 /* ============ contact ============ */
 .contact-section{ text-align: left; }
